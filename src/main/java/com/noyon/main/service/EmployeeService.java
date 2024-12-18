@@ -1,8 +1,20 @@
 package com.noyon.main.service;
 
-import com.noyon.main.dto.EmployeeDto;
+import java.util.List;
+
+import com.noyon.main.entity.Employee;
+
+
 
 public interface EmployeeService {
 
-	EmployeeDto createEmployee(EmployeeDto employeeDto);
+	Employee createEmployee(Employee employee);
+	
+	Employee getEmployeeById(long employeeId);
+	
+	List<Employee> getAllEmployees();
+	
+	Employee updateEmployee(Employee employee, long employeeId);
+	
+	public void deleteEmployee(long employeeId);
 }
